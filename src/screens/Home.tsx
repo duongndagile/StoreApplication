@@ -11,17 +11,22 @@ const Tab = createBottomTabNavigator();
 const Home = () => {
   return (
     <Tab.Navigator
-      screenOptions={({router}: any) => ({
+      screenOptions={({route}: any) => ({
         tabBarIcon: ({focused, color, size}: any) => {
-          let iconName;
-          if (router.name === 'Home') {
-            iconName = focused ? 'ios-home' : 'ios-home-outline';
-          } else if (router.name === 'Cart') {
-            iconName = focused ? 'ios-cart' : 'ios-cart-outline';
-            console.log(iconName);
+          let iconName = '';
+          if (route.name === 'Home') {
+            iconName = focused ? 'home' : 'home-outline';
+          } else if (route.name === 'Cart') {
+            iconName = focused ? 'cart' : 'cart-outline';
+          } else if (route.name === 'Orders') {
+            iconName = focused ? 'reader' : 'reader-outline';
+          } else if (route.name === 'Settings') {
+            iconName = focused ? 'settings' : 'settings-outline';
           }
-          return <Ionicons name="ios-home" size={size} color={color} />;
+          return <Ionicons name={iconName} size={size} color={color} />;
         },
+        tabBarActiveTintColor: 'tomato',
+        tabBarInactiveTintColor: 'gray',
       })}>
       <Tab.Screen name="Home" component={Categories} />
       <Tab.Screen name="Cart" component={Cart} />
