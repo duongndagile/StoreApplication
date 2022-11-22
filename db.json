@@ -1,0 +1,130 @@
+{
+  "categories": [
+      {
+          "id": 1,
+          "title": "Books",
+          "image": {
+              "id": 11,
+              "url":"https://i.ibb.co/YXpfpH4/book-store.png"
+          }
+      },
+      {
+          "id": 2,
+          "title": "Camera",
+          "image": {
+              "id": 22,
+              "url":"https://i.ibb.co/tmr3n53/camera-store.png"
+          }
+      },
+      {
+          "id": 3,
+          "title": "Clothes",
+          "image": {
+              "id": 33,
+              "url":"https://i.ibb.co/f1HdHWJ/clothes-store.png"
+          }
+      },
+      {
+          "id": 4,
+          "title": "Foods",
+          "image": {
+              "id": 44,
+              "url":"https://i.ibb.co/4KSMSsJ/food-store.png"
+          }
+      },
+      {
+          "id": 5,
+          "title": "Trees",
+          "image": {
+              "id": 55,
+              "url":"https://i.ibb.co/9GpfFH1/tree-store.png"
+          }
+      }
+  ],
+  "products": [
+          {
+            "id": "11",
+            "title": "Thao túng tâm lý",
+            "uri": "https://i.ibb.co/cc45rXV/book-1.jpg",
+            "price": 15000,
+            "category": 1
+          },
+          {
+            "id": "12",
+            "title": "Đắc nhân tâm",
+            "uri": "https://i.ibb.co/D5HTnbH/book-2.jpg",
+            "price": 8000,
+            "category": 1
+          },
+          {
+            "id": "13",
+            "title": "Tư duy phản biện",
+            "uri": "https://i.ibb.co/935D6mZ/book-3.jpg",
+            "price": 10000,
+            "category": 1
+          },
+          {
+            "id": "14",
+            "title": "Kỹ năng giao tiếp",
+            "uri": "https://i.ibb.co/WzW1bY3/book-4.jpg",
+            "price": 5000,
+            "category": 1
+          },
+          {
+            "id": "21",
+            "title": "Camera Sony",
+            "uri": "https://i.ibb.co/0QCBvpT/camera-1.jpg",
+            "price": 5000,
+            "category": 2
+          },
+          {
+            "id": "22",
+            "title": "Camera Canon",
+            "uri": "https://i.ibb.co/M8ntSTk/camera-2.jpg",
+            "price": 5000,
+            "category": 2
+          },
+          {
+            "id": "31",
+            "title": "Bộ mùa hè",
+            "uri": "https://i.ibb.co/0XK9Zmj/clothes-1.jpg",
+            "price": 5000,
+            "category": 3
+          },
+          {
+            "id": "32",
+            "title": "Bộ thu đông",
+            "uri": "https://i.ibb.co/c1stCjq/clothes-2.jpg",
+            "price": 5000,
+            "category": 3
+          },
+          {
+            "id": "41",
+            "title": "Khô gà lá chanh",
+            "uri": "https://i.ibb.co/WBL8xkc/food-1.jpg",
+            "price": 5000,
+            "category": 4
+          },
+          {
+            "id": "42",
+            "title": "Mực sấy",
+            "uri": "https://i.ibb.co/0ZmjJDC/food-2.jpg",
+            "price": 5000,
+            "category": 4
+          },
+          {
+            "id": "51",
+            "title": "Tree 1",
+            "uri": "https://i.ibb.co/yYx7hxS/tree-1.jpg",
+            "price": 5000,
+            "category": 5
+          },
+          {
+            "id": "52",
+            "title": "Tree 2",
+            "uri": "https://i.ibb.co/Hhy1d55/tree-2.jpg",
+            "price": 5000,
+            "category": 5
+          }
+    ]
+}

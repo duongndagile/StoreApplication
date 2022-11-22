@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   Image,
   Text,
@@ -10,6 +10,7 @@ import {
   Dimensions,
   Alert,
 } from 'react-native';
+import {Error, getProducts, IProducts} from './service';
 
 interface IProductProps {
   id: number | string;
@@ -22,6 +23,20 @@ const {width} = Dimensions.get('window');
 
 const Category = ({route, navigation}: any) => {
   const {data} = route.params;
+  const [products, setProducts] = useState<any>([]);
+
+  useEffect(() => {
+    getProducts({
+      onSuccess: (res: IProducts) => {
+        setProducts(res);
+      },
+      onError: (err: Error) => {
+        console.log('err', err);
+      },
+      id: data?.id,
+    });
+  }, [data.id]);
+
   const onPressCard = () => {
     console.log('a', navigation);
   };
@@ -34,20 +49,18 @@ const Category = ({route, navigation}: any) => {
     <ScrollView>
       <Text style={styles.titlePage}>{data.title}</Text>
       <View style={styles.multiCol}>
-        {data.children.map((itemProduct: IProductProps) => {
+        {products.map((item: IProductProps) => {
           return (
             <TouchableOpacity
               onPress={onPressCard}
-              key={itemProduct.id}
+              key={item.id}
               style={styles.containerProduct}>
               <View style={styles.itemProduct}>
-                <Image style={styles.image} source={itemProduct.uri} />
+                <Image style={styles.image} source={{uri: String(item.uri)}} />
                 <View style={styles.detailProduct}>
-                  <Text style={styles.itemTitle}>{itemProduct.title}</Text>
+                  <Text style={styles.itemTitle}>{item.title}</Text>
                   <View style={styles.priceAndBuy}>
-                    <Text style={styles.itemPrice}>
-                      {itemProduct.price} VNĐ
-                    </Text>
+                    <Text style={styles.itemPrice}>{item.price} VNĐ</Text>
                     <Button title="Mua" onPress={onBuy} />
                   </View>
                 </View>

@@ -5,7 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Cart from './Cart';
 import Orders from './Orders';
 import Settings from './Settings';
-import Categories from './Categories';
+import Categories from '../Categories/Categories';
 
 const Tab = createBottomTabNavigator();
 const Home = () => {
