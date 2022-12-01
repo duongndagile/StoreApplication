@@ -23,3 +23,6 @@ stack base -> authen truoc || sau moi su dung duoc -> stack
 <!-- <Button id={''} /> Wrong --> 
 <!-- <Button id={1} /> Right --> 
 Tương tự với đầu ra và đầu vào của function
+
+<!-- Ở android muốn call api local phải chuyển về cùng port và sử dụng IP.
+solution: adb -s <device_name> reverse tcp:backend_port tcp:backend_port. -->
